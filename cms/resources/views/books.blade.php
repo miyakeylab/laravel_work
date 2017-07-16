@@ -39,8 +39,11 @@
             <div class="panel-body">
                 <table class="table table-striped task-table">
                     <!-- テーブルヘッダ -->
-                    <thead> <th>本一覧</th>
-                        <th>&nbsp;</th>
+                    <thead> 
+                    <th>本一覧</th>
+                    <th>ページ数</th>
+                    <th>推定読書時間</td>
+                    <th>&nbsp;</th>
                     </thead>
                     <!-- テーブル本体 -->
                     <tbody>
@@ -52,7 +55,21 @@
                                 </div>
                             </td>
                             <td>
-                                <form action="{{ url('book/'.$book->id) }}" method="POST">
+                                ページ数
+                            </td>
+                            <td>
+                                推定読書時間
+                            </td>
+                            <td>
+                                <form action="{{ url('books/'.$book->id) }}" method="POST">
+                                    {{ csrf_field() }}
+                                    <button type="submit" class="btn btn-success"> <i class="glyphicon glyphicon-save"></i> 
+                                        スケジュール登録
+                                    </button>
+                                </form>
+                            </td>
+                            <td>
+                                <form action="{{ url('books/'.$book->id) }}" method="POST">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
                                     <button type="submit" class="btn btn-danger"> <i class="glyphicon glyphicon-trash"></i> 
