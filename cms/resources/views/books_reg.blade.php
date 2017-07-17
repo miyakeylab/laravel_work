@@ -11,6 +11,28 @@
         @include('common.errors')
         <!-- バリデーションエラーの表示に使用-->
         
+        <!-- 本登録フォーム -->
+        <form action="{{ url('books') }}" method="POST" class="form-horizontal">
+            {{ csrf_field() }}
+            
+            <!-- 本のタイトル -->
+            <div class="form-group">
+                <label for="book" class="col-sm-3 control-label">Book</label>
+                
+                <div class="col-sm-6">
+                    <input type="text" name="item_name" id="book-name"class="form-control">
+                </div>
+            </div>
+            
+            <!-- 本 登録ボタン -->
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-6">
+                    <button type="submit" class="btn btn-default">
+                        <i class="glyphicon glyphicon-plus"></i> Save
+                    </button>
+                </div>
+            </div>
+        </form>
         @if (count($books) > 0)
         <div class="panel panel-default">
             <div class="panel-heading">現在の本 </div>
@@ -39,10 +61,11 @@
                                 推定読書時間
                             </td>
                             <td>
-                                <form action="{{ url('books/'.$book->id) }}" method="POST">
+                                <form action="{{ url('books_reg/'.$book->id) }}" method="POST">
                                     {{ csrf_field() }}
-                                    <button type="submit" class="btn btn-success"> <i class="glyphicon glyphicon-save"></i> 
-                                        スケジュール登録
+                                    {{ method_field('DELETE') }}
+                                    <button type="submit" class="btn btn-danger"> <i class="glyphicon glyphicon-trash"></i> 
+                                        削除
                                     </button>
                                 </form>
                             </td>

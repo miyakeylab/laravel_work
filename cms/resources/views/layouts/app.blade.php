@@ -27,7 +27,7 @@
      
               <div id="gnavi" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                  <li><a href="">Link1</a></li>
+                  <li><a href="./books_reg">Link1</a></li>
                   <li><a href="">Link2</a></li>
                   <li><a href="">Link3</a></li>
                 </ul>

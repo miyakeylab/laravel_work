@@ -40,7 +40,17 @@ Route::post('/books', function (Request $request) {
 /**
 * 本 を 削除 
 */ 
-Route::delete('/books/{book}', function (Books $book) {
+Route::delete('/books_reg/{book}', function (Books $book) {
     $book->delete();
-    return redirect('/');
+    return redirect('/books_reg');
 });
+/**
+ * 登録画面へ遷移
+ */
+Route::get('/books_reg', function () {
+    
+    $books = Books::orderBy('created_at', 'asc')->get();
+    return view('books_reg', ['books' => $books]);
+	 //
+//	 return view('books');
+}); 
