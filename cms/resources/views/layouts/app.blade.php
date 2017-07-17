@@ -27,9 +27,9 @@
      
               <div id="gnavi" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                  <li><a href="./books_reg">Link1</a></li>
-                  <li><a href="">Link2</a></li>
-                  <li><a href="">Link3</a></li>
+                  <li><a href="../">メイン</a></li>
+                  <li><a href="">マイスケジュール</a></li>
+                  <li><a href="../books_reg">本管理</a></li>
                 </ul>
               </div>
             </nav>

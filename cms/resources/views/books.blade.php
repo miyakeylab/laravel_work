@@ -20,7 +20,7 @@
                     <thead> 
                     <th>本一覧</th>
                     <th>ページ数</th>
-                    <th>推定読書時間</td>
+                    <th>平均読了時間</td>
                     <th>&nbsp;</th>
                     </thead>
                     <!-- テーブル本体 -->
@@ -33,10 +33,12 @@
                                 </div>
                             </td>
                             <td>
-                                ページ数
+                                <div>{{ $book->item_page }}
+                                </div>
                             </td>
                             <td>
-                                推定読書時間
+                                <div>{{ $book->item_time }}
+                                </div>
                             </td>
                             <td>
                                 <form action="{{ url('books/'.$book->id) }}" method="POST">
