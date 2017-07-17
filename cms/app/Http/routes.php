@@ -54,8 +54,7 @@ Route::get('/books_reg', function () {
     $books = Books::orderBy('created_at', 'asc')->get();
     
     return view('books_reg', ['books' => $books]);
-	 //
-//	 return view('books');
+	
 }); 
 /** 
 * 更新画面へ遷移
@@ -63,8 +62,6 @@ Route::get('/books_reg', function () {
 Route::get('/books_mod/{book}', function (Books $book) {
     
     return view('books_mod', ['books' => $book]);
-	 //
-//	 return view('books');
 }); 
 /**
 * 「本」 を 更新 
@@ -88,4 +85,12 @@ Route::post('/books_mod', function (Request $request) {
     $books->published = Carbon::now();
     $books->save();   //「/」ルートにリダイレクト 
     return redirect('/books_reg');
+}); 
+/** 
+* スケジュール 表示 
+*/ 
+Route::get('/my_schedule', function () {
+    
+    return view('my_schedule');
+
 }); 
