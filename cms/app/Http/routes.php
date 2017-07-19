@@ -1,5 +1,6 @@
 <?php
 use App\Books; 
+use App\Schedule;
 use Illuminate\Http\Request; 
 use Carbon\Carbon;
 /** 
