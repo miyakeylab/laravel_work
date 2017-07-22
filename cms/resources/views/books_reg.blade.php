@@ -28,6 +28,18 @@
                 </div>
             </div>
             <div class="form-group">
+                <label for="book" class="col-sm-3 control-label">金額</label>
+                <div class="col-sm-6">
+                    <input type="number" name="item_amount" id="item-amount"class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="book" class="col-sm-3 control-label">冊数</label>
+                <div class="col-sm-6">
+                    <input type="number" name="item_number" id="item-number"class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
                 <label for="book" class="col-sm-3 control-label">平均読了時間</label>
                 <div class="col-sm-6">
                     <input type="number" name="item_time" id="item-time"class="form-control">
@@ -51,7 +63,10 @@
                     <thead> 
                     <th>本一覧</th>
                     <th>ページ数</th>
-                    <th>平均読了時間</td>
+                    <th>平均読了時間</td>                    
+                    <th>金額</th>
+                    <th>冊数</td>
+                    <th>登録時間</td>
                     <th>&nbsp;</th>
                     </thead>
                     <!-- テーブル本体 -->
@@ -69,6 +84,18 @@
                             </td>
                             <td>
                                 <div>{{ $book->item_time }}
+                                </div>
+                            </td>                           
+                            <td>
+                                <div>{{ $book->item_amount }}
+                                </div>
+                            </td>
+                            <td>
+                                <div>{{ $book->item_number }}
+                                </div>
+                            </td>                            
+                            <td>
+                                <div>{{ $book->published }}
                                 </div>
                             </td>
                             <td>

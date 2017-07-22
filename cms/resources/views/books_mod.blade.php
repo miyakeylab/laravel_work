@@ -32,6 +32,18 @@
                     <input type="number" name="item_time" id="item-time"class="form-control" value={{ $books->item_time }}>
                 </div>
             </div>
+                        <div class="form-group">
+                <label for="book" class="col-sm-3 control-label">冊数</label>
+                <div class="col-sm-6">
+                    <input type="number" name="item_number" id="item-number"class="form-control" value={{ $books->item_number }}>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="book" class="col-sm-3 control-label">金額</label>
+                <div class="col-sm-6">
+                    <input type="number" name="item_amount" id="item-amount"class="form-control" value={{ $books->item_amount }}>
+                </div>
+            </div>
              <input type="hidden" name="item_id" id="item-id"class="form-control" value={{ $books->id }}>
             <!-- 本 登録ボタン -->
             <div class="form-group">

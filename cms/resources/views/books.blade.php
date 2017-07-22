@@ -21,6 +21,9 @@
                     <th>本一覧</th>
                     <th>ページ数</th>
                     <th>平均読了時間</td>
+                    <th>金額</th>
+                    <th>冊数</td>
+                    <th>登録時間</td>
                     <th>&nbsp;</th>
                     </thead>
                     <!-- テーブル本体 -->
@@ -38,6 +41,18 @@
                             </td>
                             <td>
                                 <div>{{ $book->item_time }}
+                                </div>
+                            </td>
+                            <td>
+                                <div>{{ $book->item_amount }}
+                                </div>
+                            </td>
+                            <td>
+                                <div>{{ $book->item_number }}
+                                </div>
+                            </td>
+                            <td>
+                                <div>{{ $book->published }}
                                 </div>
                             </td>
                             <td>
