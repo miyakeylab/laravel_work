@@ -7,7 +7,6 @@ use Carbon\Carbon;
 * 本 のダッシュボード 表示 
 */ 
 Route::get('/', 'BooksController@RootView');
-
 /**
 * 新 「本」 を 追加 
 */ 
@@ -23,10 +22,7 @@ Route::get('/books_reg', 'BooksController@RegView');
 /** 
 * 更新画面へ遷移
 */ 
-Route::get('/books_mod/{book}', function (Books $book) {
-    
-    return view('books_mod', ['books' => $book]);
-}); 
+Route::get('/books_mod/{book}','BooksController@ModView'); 
 /**
 * 「本」 を 更新 
 */ 
@@ -39,3 +35,6 @@ Route::get('/my_schedule', function () {
     return view('my_schedule');
 
 }); 
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

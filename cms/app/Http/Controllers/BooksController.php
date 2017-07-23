@@ -11,6 +11,10 @@ use Carbon\Carbon;
 
 class BooksController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     //
     /**
      *   データ登録処理
@@ -45,16 +49,20 @@ class BooksController extends Controller
     
     /**
      *   データ更新処理
-     * */
+     **/
     public function Updata(Request $request)
     {
         //バリデーション
         $validator = Validator::make($request->all(), [
-                'item_name' => 'required|max:255',
+                'item_name' => 'required|max:255',                
+                'item_number' => 'required|max:99999',
+                'item_amount' => 'required|max:99999',
+                'item_page' => 'required|max:5000',
+                'item_time' => 'required|max:500',
         ]);
         //バリデーション:エラー
         if ($validator->fails()) {
-                return redirect('/')
+                return redirect('/books_reg')
                     ->withInput()
                     ->withErrors($validator);
         }
@@ -70,22 +78,37 @@ class BooksController extends Controller
         return redirect('/books_reg');
     } 
     
+    /**
+     *  登録画面表示
+     **/
     public function RegView() {
     
         $books = Books::orderBy('created_at', 'asc')->get();
         
         return view('books_reg', ['books' => $books]);
     }
-       
+    /**
+     *  メイン画面表示
+     **/   
     public  function RootView(Books $book) {
     
         $books = Books::orderBy('created_at', 'asc')->get();
         return view('books', ['books' => $books]);
     }
-    
+    /**
+     *  削除処理
+     **/
     public  function Delete(Books $book) {
         $book->delete();
         return redirect('/books_reg');
             
+    }
+    
+    /**
+     *  追加画面表示 
+     **/
+    public function ModView(Books $book) {
+        
+        return view('books_mod', ['books' => $book]);
     }
 }
