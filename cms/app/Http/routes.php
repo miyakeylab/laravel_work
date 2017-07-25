@@ -30,11 +30,8 @@ Route::post('/books_mod', 'BooksController@Updata');
 /** 
 * スケジュール 表示 
 */ 
-Route::get('/my_schedule', function () {
-    
-    return view('my_schedule');
+Route::get('/my_schedule','BooksController@ScheView');
 
-}); 
 Route::auth();
 
 Route::get('/home', 'HomeController@index');

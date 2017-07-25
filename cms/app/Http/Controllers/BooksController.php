@@ -111,4 +111,11 @@ class BooksController extends Controller
         
         return view('books_mod', ['books' => $book]);
     }
+    
+    /**
+     *  追加画面表示 
+     **/
+    public function ScheView() {
+        return view('my_schedule');
+    }
 }
