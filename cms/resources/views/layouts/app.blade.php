@@ -48,7 +48,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
+                    FreeTime
                 </a>
             </div>
 
@@ -70,9 +70,9 @@
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
                             
-                                <li><a href="../">メイン</a></li>
+                                <!--<li><a href="../">メイン</a></li>-->
                                 <li><a href="../my_schedule">マイスケジュール</a></li>
-                                <li><a href="../books_reg">本管理</a></li>
+                                <!--<li><a href="../books_reg">本管理</a></li>-->
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
