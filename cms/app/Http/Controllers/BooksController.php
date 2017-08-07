@@ -90,10 +90,9 @@ class BooksController extends Controller
     /**
      *  メイン画面表示
      **/   
-    public  function RootView(Books $book) {
+    public  function RootView() {
     
-        $books = Books::orderBy('created_at', 'asc')->get();
-        return view('books', ['books' => $books]);
+        return view('/my_schedule' );
     }
     /**
      *  削除処理
