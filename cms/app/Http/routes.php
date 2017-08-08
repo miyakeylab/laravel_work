@@ -4,15 +4,23 @@ use App\Schedule;
 use Illuminate\Http\Request; 
 use Carbon\Carbon;
 /** 
-* 本 のダッシュボード 表示 
+* スケジュール 表示 
 */ 
-Route::get('/', 'BooksController@RootView');
+Route::get('/', 'ScheduleController@RootView');
 
 /** 
 * スケジュール 表示 
 */ 
-Route::get('/my_schedule','BooksController@ScheView');
+Route::get('/my_schedule','ScheduleController@ScheView');
 
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('auth/{provide}','Auth\AuthController@redirectToProvider');
+Route::get('auth/{provide}/callback','Auth\AuthController@handleProviderCallback');
+

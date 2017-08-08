@@ -34,50 +34,50 @@
                 <?php endfor;?>
             </tr>
             <tr>
-                <td colspan="36" align="center">睡眠</td>
+                <td class="info" colspan="36" align="center">睡眠</td>
                 <td colspan="108" align="center"></td>
             </tr>
             <tr>
-                <td colspan="36" align="center">睡眠</td>
+                <td class="info" colspan="36" align="center">睡眠</td>
                 <td colspan="3" align="center">朝食</td>
                 <td colspan="3" align="center"></td>
                 <td colspan="6" align="center">移動</td>
-                <td colspan="80" align="center">仕事</td>
+                <td class="danger" colspan="80" align="center">仕事</td>
                 <td colspan="16" align="center"></td>
             </tr>
                         <tr>
-                <td colspan="36" align="center">睡眠</td>
+                <td class="info" colspan="36" align="center">睡眠</td>
                 <td colspan="108" align="center"></td>
             </tr>
             <tr>
-                <td colspan="36" align="center">睡眠</td>
+                <td  class="info" colspan="36" align="center">睡眠</td>
                 <td colspan="3" align="center">朝食</td>
                 <td colspan="3" align="center"></td>
                 <td colspan="6" align="center">移動</td>
-                <td colspan="80" align="center">仕事</td>
+                <td class="danger" colspan="80" align="center">仕事</td>
                 <td colspan="16" align="center"></td>
             </tr>
                         <tr>
-                <td colspan="36" align="center">睡眠</td>
+                <td class="info" colspan="36" align="center">睡眠</td>
                 <td colspan="108" align="center"></td>
             </tr>
             <tr>
-                <td colspan="39" align="center">睡眠</td>
+                <td class="info" colspan="39" align="center">睡眠</td>
                 <td colspan="3" align="center"></td>
                 <td colspan="6" align="center">移動</td>
-                <td colspan="80" align="center">仕事</td>
+                <td class="danger" colspan="80" align="center">仕事</td>
                 <td colspan="16" align="center"></td>
             </tr>
                         <tr>
-                <td colspan="36" align="center">睡眠</td>
+                <td class="info" colspan="36" align="center">睡眠</td>
                 <td colspan="108" align="center"></td>
             </tr>
             <tr>
-                <td colspan="36" align="center">睡眠</td>
+                <td class="info" colspan="36" align="center">睡眠</td>
                 <td colspan="3" align="center">朝食</td>
                 <td colspan="3" align="center"></td>
                 <td colspan="6" align="center">移動</td>
-                <td colspan="80" align="center">仕事</td>
+                <td class="danger" colspan="80" align="center">仕事</td>
                 <td colspan="16" align="center"></td>
             </tr>
         </table>
