@@ -23,7 +23,7 @@ class ScheduleController extends Controller
         return view('my_schedule' );
     }
     /**
-     *  追加画面表示 
+     *  スケジュール画面表示 
      **/
     public function ScheView() {
         return view('my_schedule');

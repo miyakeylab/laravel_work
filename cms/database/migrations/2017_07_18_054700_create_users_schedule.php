@@ -14,8 +14,11 @@ class CreateUsersSchedule extends Migration
     {
         Schema::create('schedule', function (Blueprint $table) {
             $table->increments('id');
+            $table->datetime('my_time_id');
             $table->datetime('start_time');
             $table->datetime('end_time');
+            $table->datetime('start_time_def');
+            $table->datetime('end_time_def');
             $table->datetime('published');
             $table->timestamps();
         });
