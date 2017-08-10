@@ -24,61 +24,26 @@
         <div class="table-responsive" id="LAYER">
         <table class="table table-bordered" style="font-size : 5px;">
             <tr>
-                <?php for ($i=0;$i<144;$i++): ?>
+                <?php for ($i=0;$i<48;$i++): ?>
                 <th></th>
                 <?php endfor;?>
             </tr>
             <tr>
                 <?php for ($i=0;$i<24;$i++): ?>
-                <td colspan="6" align="center"><?=$i?>:00</td>
+                <td colspan="2" align="center"><?=$i?>:00</td>
                 <?php endfor;?>
             </tr>
             <tr>
-                <td class="info" colspan="36" align="center">睡眠</td>
-                <td colspan="108" align="center"></td>
+                <td class="info" colspan="12" align="center">睡眠</td>
+                <td colspan="36" align="center"></td>
             </tr>
             <tr>
-                <td class="info" colspan="36" align="center">睡眠</td>
-                <td colspan="3" align="center">朝食</td>
-                <td colspan="3" align="center"></td>
-                <td colspan="6" align="center">移動</td>
-                <td class="danger" colspan="80" align="center">仕事</td>
-                <td colspan="16" align="center"></td>
-            </tr>
-                        <tr>
-                <td class="info" colspan="36" align="center">睡眠</td>
-                <td colspan="108" align="center"></td>
-            </tr>
-            <tr>
-                <td  class="info" colspan="36" align="center">睡眠</td>
-                <td colspan="3" align="center">朝食</td>
-                <td colspan="3" align="center"></td>
-                <td colspan="6" align="center">移動</td>
-                <td class="danger" colspan="80" align="center">仕事</td>
-                <td colspan="16" align="center"></td>
-            </tr>
-                        <tr>
-                <td class="info" colspan="36" align="center">睡眠</td>
-                <td colspan="108" align="center"></td>
-            </tr>
-            <tr>
-                <td class="info" colspan="39" align="center">睡眠</td>
-                <td colspan="3" align="center"></td>
-                <td colspan="6" align="center">移動</td>
-                <td class="danger" colspan="80" align="center">仕事</td>
-                <td colspan="16" align="center"></td>
-            </tr>
-                        <tr>
-                <td class="info" colspan="36" align="center">睡眠</td>
-                <td colspan="108" align="center"></td>
-            </tr>
-            <tr>
-                <td class="info" colspan="36" align="center">睡眠</td>
-                <td colspan="3" align="center">朝食</td>
-                <td colspan="3" align="center"></td>
-                <td colspan="6" align="center">移動</td>
-                <td class="danger" colspan="80" align="center">仕事</td>
-                <td colspan="16" align="center"></td>
+                <td class="info" colspan="12" align="center">睡眠</td>
+                <td colspan="1" align="center">朝食</td>
+                <td colspan="1" align="center"></td>
+                <td colspan="2" align="center">移動</td>
+                <td class="danger" colspan="6" align="center">仕事</td>
+                <td colspan="26" align="center"></td>
             </tr>
         </table>
         

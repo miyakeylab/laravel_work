@@ -19,6 +19,7 @@
     <link href="{{ asset('css/assets/css/font-awesome.css')}}" rel="stylesheet">
     <link href="{{ asset('css/assets/css/docs.css')}}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap-social.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/assets/css/style.css')}}" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 </head>
@@ -36,15 +37,15 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    FreeTime
-                </a>
+                <a class="navbar-brand" href="{{ url('/') }}"></a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
+                    @if (!Auth::guest())
                     <li><a href="{{ url('/home') }}">Home</a></li>
+                    @endif
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -68,7 +69,6 @@
             </div>
         </div>
     </nav>
-
     @yield('content')
 
     <!-- JavaScripts -->
